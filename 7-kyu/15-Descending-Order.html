@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descending Order</title>
+  </head>
+  <body>
+    <script>
+
+      function descendingOrder(n){
+        //...
+        let nums = Array.from(n.toString())
+        let result = nums.sort((a,b) => b - a)
+        let number = result.join('')
+        return Number(number)
+        
+        }
+
+        alert(descendingOrder(123456789))
+        alert(descendingOrder(235483486))
+        alert(descendingOrder(456123))
+        alert(descendingOrder(987654312))
+    </script>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let str = 'Coding is Great';
+      let lower = str.split(' ').join('').toLowerCase();
+      let vowelMod = lower.replace(/[aieou]/gi, ' ');
+      alert(vowelMod);
+
+      function vowelStart(str) {
+        // write your code here
+        let myStr = '';
+        let vowels = /[aeiou]/gi;
+        let lower = str.split(' ').join('').toLowerCase();
+        // let newStr = str.replace(vowel, ' ' + letter);
+
+        for (let letter of lower) {
+          if (letter.match(vowels)) {
+            return ' ' + letter;
+          }
+          if (letter === '-') {
+            letter = '';
+          }
+
+          if (letter === '!') {
+            letter = '';
+          }
+
+          if (letter === '!') {
+            letter = '';
+          }
+
+          myStr += letter;
+        }
+        return myStr;
+      }
+
+      alert(vowelStart(str));
+    </script>
+  </body>
+</html>

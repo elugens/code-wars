@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square Every Digit</title>
+  </head>
+  <body>
+    <script>
+      // Solution 1:
+      function squareDigits(num) {
+        return Number(
+          ('' + num)
+            .split('')
+            .map(function (val) {
+              return val * val;
+            })
+            .join('')
+        );
+      }
+
+      // Solution 2:
+      function squareDigits(num) {
+        //may the code be with you\
+        let str = num.toString();
+        let storage = [];
+        let result = '';
+
+        for (let i = 0; i < str.length; i++) {
+          storage.push(parseInt(str[i]) * parseInt(str[i]));
+        }
+
+        for (let j = 0; j < storage.length; j++) {
+          result += storage[j];
+        }
+
+        return parseInt(result);
+      }
+
+      // Solution 3:
+      function squareDigits(num) {
+        var string = num.toString();
+        var results = [];
+        for (var i = 0; i < string.length; i++) {
+          results[i] = string[i] * string[i];
+        }
+        return Number(results.join(''));
+      }
+
+      alert(squareDigits(9119));
+    </script>
+  </body>
+</html>

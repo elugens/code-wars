@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array element parity</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, -1, 2, -2, 3];
+      let arr2 = [-3, 1, 2, 3, -1, -4, -2];
+      let arr3 = [-110, 110, -38, -38, -62, 62, -38, -38, -38];
+
+      let arr4 = new Set(arr3);
+
+      alert(arr4.size);
+
+      function solve(arr) {
+        const numbers = new Set(arr);
+        for (const num of numbers) {
+          if (!numbers.has(-num)) return num;
+        }
+      }
+
+      alert(solve(arr));
+    </script>
+  </body>
+</html>

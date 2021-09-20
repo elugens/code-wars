@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peak array index</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 5, 3, 2, 1];
+
+      function peak(arr) {
+        var sum1 = 0;
+        var sum2 = 0;
+        var last = arr.length - 1;
+        var first = 0;
+        while (first < last) {
+          if (sum1 > sum2) {
+            sum2 += arr[last];
+            last--;
+          } else if (sum1 <= sum2) {
+            sum1 += arr[first];
+            first++;
+          }
+        }
+        if (last == first && sum1 == sum2) {
+          return last;
+        } else {
+          return -1;
+        }
+      }
+
+      alert(peak(arr));
+    </script>
+  </body>
+</html>

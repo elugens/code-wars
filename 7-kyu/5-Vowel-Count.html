@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel Count</title>
+  </head>
+  <body>
+    <script>
+      function getCount(str) {
+        str = str.toLowerCase();
+        let vowels = 'aeiou';
+        let vowelsCount = 0;
+
+        // enter your majic here
+        for (let i = 0; i < str.length; i++) {
+          if (vowels.indexOf(str[i]) !== -1) {
+            vowelsCount += 1;
+          }
+        }
+        return vowelsCount;
+      }
+
+      alert(getCount('abracadabra'));
+      alert(getCount('helloworldiamstacey'));
+    </script>
+  </body>
+</html>

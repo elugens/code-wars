@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filling an array (part 1)</title>
+  </head>
+  <body>
+    <script>
+      /*
+        We want an array, but not just any old array, an array with contents!
+
+        Write a function that produces an array with the numbers 0 to N-1 in it.
+
+        For example, the following code will result in an array containing the numbers 0 to 4:
+
+        arr(5) // => [0,1,2,3,4]
+        */
+
+      /// SOLUTION 1 ///
+
+      function arr(N) {
+        newArr = [];
+
+        for (let i = 0; i < N; i++) {
+          newArr.push(i);
+        }
+
+        return newArr;
+      }
+
+      // console.log(arr(5));
+
+      /// SOLUTION 2 ///
+
+      function myArr(n) {
+        let result = [];
+        let count = 0;
+
+        while (count < n) {
+          result.push(count);
+          count += 1;
+        }
+        return result;
+      }
+
+      // console.log(myArr(5));
+
+      /// SOLUTION 3 ///
+
+      function myArray(n) {
+        let count = 0;
+        let arr = [];
+
+        do {
+          count++;
+          arr.push(count - 1);
+        } while (count < n);
+
+        return arr;
+      }
+
+      // console.log(myArray(5));
+
+      /// SOLUTION 4 ///
+    </script>
+  </body>
+</html>

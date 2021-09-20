@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parse float</title>
+  </head>
+  <body>
+    <script>
+      /*
+
+      Write function parseF which takes an input and returns a number or null if conversion 
+      is not possible. The input can be one of many different types so be aware.
+      
+      */
+
+      /// SOLUTION 1 ///
+
+      const parseF = (s) => (isNaN(parseFloat(s)) ? null : parseFloat(s));
+
+      /// SOLUTION 2 ///
+
+      function parseFl(s) {
+        return isNaN(parseFloat(s)) ? null : parseFloat(s);
+      }
+
+      alert(parseF('2'));
+    </script>
+  </body>
+</html>

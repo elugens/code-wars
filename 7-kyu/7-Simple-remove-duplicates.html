@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple remove duplicates</title>
+  </head>
+  <body>
+    <script>
+      function solve(arr) {
+        //..
+        return (uniqueNumbers = [...new Set(arr.reverse())].reverse());
+      }
+
+      alert(solve([3, 4, 4, 3, 6, 3]));
+    </script>
+  </body>
+</html>

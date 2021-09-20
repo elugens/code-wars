@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get the mean of an array</title>
+  </head>
+  <body>
+    <script>
+      function getAverage(marks) {
+        //TODO : calculate the downwar rounded average of the marks array
+        const reducer = (accumulator, currentValue) =>
+          accumulator + currentValue;
+        let mean = Math.floor(marks.reduce(reducer) / marks.length);
+        return mean;
+      }
+
+      alert(getAverage([1, 2, 3, 4, 5]));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start with a Vowel</title>
+  </head>
+  <body>
+    <script>
+      let str = 'Coding is Great';
+
+      function vowelStart(str) {
+        // write your code here
+        let myStr = '';
+        let lower = str.split(' ').join('').toLowerCase();
+
+        for (let letter of lower) {
+          switch (letter) {
+            case 'a':
+              letter = ' a';
+              break;
+            case 'e':
+              letter = ' e';
+              break;
+            case 'i':
+              letter = ' i';
+              break;
+            case 'o':
+              letter = ' o';
+              break;
+            case 'u':
+              letter = ' u';
+              break;
+            case '?':
+            case '_':
+            case '-':
+            case '!':
+            case ',':
+            case '?':
+              letter = '';
+              break;
+          }
+
+          myStr += letter;
+        }
+        return myStr.trim();
+      }
+
+      alert(vowelStart(str));
+    </script>
+  </body>
+</html>

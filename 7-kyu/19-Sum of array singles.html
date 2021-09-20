@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of array singles</title>
+  </head>
+  <body>
+    <script>
+      let arr = [9, 10, 19, 13, 19, 13];
+
+      function repeats(arr) {
+        let sum = 0;
+
+        arr.sort(function (a, b) {
+          return a - b;
+        });
+
+        for (let i = 0; i < arr.length; i += 2) {
+          if (arr[i] !== arr[i + 1]) {
+            sum += arr[i];
+            i--;
+          }
+        }
+        return sum;
+      }
+
+      alert(repeats(arr));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disemvowel Trolls</title>
+  </head>
+  <body>
+    <script>
+      function disemvowel(str) {
+        return str.replace(/[aeiou]/gi, '');
+      }
+
+      alert(disemvowel('This website is for losers LOL!'));
+
+      /// Alternative Code ///
+
+      function disemvowel(str) {
+        var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+        return str
+          .split('')
+          .filter((el) => {
+            return vowels.indexOf(el.toLowerCase()) == -1;
+          })
+          .join('');
+      }
+      alert(disemvowel('This website is for losers LOL!'));
+    </script>
+  </body>
+</html>

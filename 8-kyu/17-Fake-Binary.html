@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Binary</title>
+  </head>
+  <body>
+    <script>
+      /*
+
+      Given a string of digits, you should replace any digit below 5 with '0'
+      and any digit 5 and above with '1'. Return the resulting string.
+
+      */
+
+      /// SOLUTION 1 ///
+      function fakeBin(x) {
+        return x
+          .split('')
+          .map((n) => (n < 5 ? 0 : 1))
+          .join('');
+      }
+
+      const fakeBin4 = (x) => [...x].map((a) => (+a < 5 ? 0 : 1)).join('');
+
+      function fakeBin5(x) {
+        return x.replace(/[0-9]/g, (num) => (num < 5 ? 0 : 1));
+      }
+
+      /// SOLUTION 2 ///
+
+      function fakeBin2(x) {
+        let bin = '';
+        for (let num of x) {
+          num < 5 ? (bin += 0) : (bin += 1);
+        }
+        return bin;
+      }
+
+      /// SOLUTION 3 ///
+
+      function fakeBin3(x) {
+        let bin = '';
+        for (let num of x) {
+          if (num < 5) {
+            bin += 0;
+          } else {
+            bin += 1;
+          }
+        }
+        return bin;
+      }
+
+      /// SOLUTION 4 ///
+
+      function fakeBin4(x) {
+        return x.replace(/\d/g, (d) => (d < 5 ? 0 : 1));
+      }
+
+      alert(fakeBin('45385593107843568'));
+    </script>
+  </body>
+</html>

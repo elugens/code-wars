@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The falling speed of petals</title>
+  </head>
+  <body>
+    <script>
+      /// The falling speed of petals ///
+      function sakuraFall(v) {
+        if (v > 0) {
+          return 400 / v;
+        } else {
+          return 0;
+        }
+      }
+
+      // Alternative Arrow Function
+      // const sakuraFall = (v) => (v > 0 ? 400 / v : 0);
+
+      alert(sakuraFall(10));
+    </script>
+  </body>
+</html>

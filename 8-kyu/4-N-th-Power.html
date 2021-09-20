@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N-th Power</title>
+  </head>
+  <body>
+    <script>
+      /// N-th Power ///
+      function index(array, n) {
+        //your code here
+        return array[n] == undefined ? -1 : array[n] ** n;
+        // if(array[n] == undefined) {
+        //     return -1
+        // } else {
+        //     return array[n] ** n
+        // }
+      }
+
+      alert(index([1, 2, 3, 4], 2));
+      alert(index([6, 31], 3), -1);
+    </script>
+  </body>
+</html>

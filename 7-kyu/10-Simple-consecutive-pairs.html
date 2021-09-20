@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple consecutive pairs</title>
+  </head>
+  <body>
+    <script>
+      function pairs(ar) {
+        let count = 0;
+        for (let i = 0; i < ar.length; i += 2)
+          if (Math.abs(ar[i] - ar[i + 1]) === 1) {
+            count += 1;
+          }
+        return count;
+      }
+
+      alert(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5]));
+    </script>
+  </body>
+</html>

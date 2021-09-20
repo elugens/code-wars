@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counting sheep... - 8Kyu</title>
+  </head>
+  <body>
+    <script>
+      /// Counting sheep... - 8Kyu ///
+
+      var array1 = [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+      ];
+
+      function countSheeps(arrayOfSheep) {
+        // TODO May the force be with you
+        let result = arrayOfSheep.reduce(
+          (count, item) => count + (item === true),
+          0
+        );
+        return result;
+      }
+
+      alert(countSheeps(array1));
+    </script>
+  </body>
+</html>

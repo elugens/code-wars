@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String repeat</title>
+  </head>
+  <body>
+    <script>
+      /*
+
+
+            */
+
+      /// SOLUTION 1 ///
+
+      const repeatStr = (n, s) => `${s.repeat(n)}`;
+
+      /// SOLUTION 2 ///
+
+      const repeatStr2 = (n, s) => {
+        let str = '';
+        for (let i = 0; i <= n; i++) {
+          str += s;
+        }
+        return str;
+      };
+
+      /// SOLUTION 3 ///
+
+      function repeatStr3(n, s) {
+        let str = '';
+        for (let i = 0; i <= n; i++) {
+          str += s;
+        }
+        return str;
+      }
+
+      alert(repeatStr(4, 'Four'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Sequence Practice</title>
+  </head>
+  <body>
+    <script>
+      function sumOfN(n) {
+        // insert here your code
+        let arr = [0];
+        for (let i = 1; i < Math.abs(n) + 1; i++) {
+          if (n > 0) {
+            arr[i] = arr[i - 1] + i;
+          } else {
+            arr[i] = arr[i - 1] - i;
+          }
+        }
+        return arr;
+      }
+
+      alert(sumOfN(5));
+    </script>
+  </body>
+</html>

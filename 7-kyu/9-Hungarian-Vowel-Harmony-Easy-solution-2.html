@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hungarian Vowel Harmony (easy)</title>
+  </head>
+  <body>
+    <script>
+      function dative(word) {
+        let frontVowel = 'eéiíöőüű';
+        let backVowel = 'aáoóuú';
+
+        for (let i = word.length - 1; i >= 0; i--) {
+          if (frontVowel.includes(word[i])) return word + 'nek';
+          if (backVowel.includes(word[i])) return word + 'nak';
+        }
+        return;
+      }
+
+      alert(dative('ablak'));
+      alert(dative('szék'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sumTwoSmallestNumbers</title>
+  </head>
+  <body>
+    <script>
+      function sumTwoSmallestNumbers(numbers) {
+        let nums = numbers.sort((a, b) => a - b);
+        return nums[0] + nums[1];
+      }
+      alert(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
+    </script>
+  </body>
+</html>

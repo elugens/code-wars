@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h2>The Difference Between call() and apply()</h2>
+
+    <script>
+      /* The difference is:
+
+        The call() method takes arguments separately.
+
+        The apply() method takes arguments as an array. 
+        */
+
+      var person = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + ' ' + this.lastName + ',' + city + ',' + country
+          );
+        },
+      };
+
+      var person1 = {
+        firstName: 'John',
+        lastName: 'Doe',
+      };
+
+      var person2 = {
+        firstName: 'Mary',
+        lastName: 'Doe',
+      };
+
+      // The apply() method accepts arguments in an array:
+      var personOne = person.fullName.apply(person1, ['Oslo', 'Norway']);
+      alert(personOne);
+
+      // Compared with the call() method: Separate Arguments
+      var personTwo = person.fullName.call(person1, 'Atwater', 'California');
+      alert(personTwo);
+    </script>
+  </body>
+</html>

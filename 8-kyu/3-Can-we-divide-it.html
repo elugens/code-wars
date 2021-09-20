@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can we divide it?</title>
+  </head>
+  <body>
+    <script>
+      /// Can we divide it? ///
+
+      function isDivideBy(number, a, b) {
+        // good luck
+        if (number % a === 0 && number % b === 0) {
+          return true;
+        } else {
+          return false;
+        }
+
+        // optional approach
+        // let result = number % a === 0 && number % b === 0 ? true : false;
+        // return result
+      }
+
+      alert(isDivideBy(-12, 2, -5));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers in strings</title>
+  </head>
+  <body>
+    <script>
+      /// Solution: Numbers in strings
+      function solve(s) {
+        num = 0;
+        result = 0;
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] >= 0 && s[i] <= 9) {
+            num = num * 10 + (s[i] - 0);
+          } else {
+            result = Math.max(result, num);
+            num = 0;
+          }
+        }
+        return Math.max(result, num);
+      }
+
+      alert(solve('gh12cdy695m1'));
+      alert(solve('lu1j8qbbb85'));
+    </script>
+  </body>
+</html>

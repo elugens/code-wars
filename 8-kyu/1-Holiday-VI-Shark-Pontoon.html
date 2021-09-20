@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday VI - Shark Pontoon - 8 Kyu</title>
+  </head>
+  <body>
+    <script>
+      /// Holiday VI - Shark Pontoon - 8 Kyu ///
+
+      function shark(
+        pontoonDistance,
+        sharkDistance,
+        youSpeed,
+        sharkSpeed,
+        dolphin
+      ) {
+        // Edge Case to check for attacking dolphin
+        if (dolphin == true) {
+          sharkSpeed = sharkSpeed / 2;
+        }
+
+        // Calculate amount of time it takes to get to the pontoon
+        let sharkRate = sharkDistance / sharkSpeed;
+        let youRate = pontoonDistance / youSpeed;
+
+        // Return something based on who gets to the pontoon first.
+        result = sharkRate < youRate ? 'Shark Bait!' : 'Alive!';
+        return result;
+      }
+
+      alert(shark(12, 50, 4, 8, true));
+      alert(shark(7, 55, 4, 16, true));
+      alert(shark(24, 0, 4, 8, true));
+    </script>
+  </body>
+</html>

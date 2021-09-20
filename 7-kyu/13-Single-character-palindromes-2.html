@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single character palindromes II</title>
+  </head>
+  <body>
+    <script>
+      // Partial Solution 1:
+      function solve(str) {
+        revStr = '';
+
+        if (str.length == 1) {
+          return false;
+        }
+
+        if (str.length % 2 == 1) {
+          return true;
+        }
+
+        for (let i = str.length - 1; i >= 0; i--) {
+          revStr += str[i];
+        }
+
+        if (revStr === str) return false;
+        else return true;
+      }
+
+      // Solution 2:
+      function solve(str) {
+        var reverseStr = str.split('').reverse().join('');
+        var match = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (reverseStr[i] === str[i]) {
+            match++;
+          }
+        }
+        return (
+          match === str.length - 2 ||
+          (match == str.length && str.length % 2 != 0)
+        );
+      }
+
+      // Solution 3:
+
+      function solve(str) {
+        var lng = str.length;
+        var found = false;
+
+        for (let i = 0; i < lng / 2; i++) {
+          if (str[i] != str[lng - i - 1]) {
+            if (found) return false;
+            else found = true;
+          }
+        }
+
+        return found || str.length % 2 != 0;
+      }
+
+      alert(solve('abba'));
+      alert(solve('abbaa'));
+      alert(solve('abbx'));
+      alert(solve('aa'));
+      alert(solve('ab'));
+      alert(solve('abcba'));
+      alert(solve('a'));
+    </script>
+  </body>
+</html>

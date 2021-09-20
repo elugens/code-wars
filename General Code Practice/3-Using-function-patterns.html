@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using function patterns</title>
+  </head>
+  <body>
+    <script>
+      // oodlify :: String -> String
+      function oodlify(s) {
+        return s.replace(/[aeiou]/g, 'oodle');
+      }
+
+      function izzlify(s) {
+        return s.replace(/[aeiou]+/g, 'izzle');
+      }
+
+      function izzy(s) {
+        return s + 'izzy \n';
+      }
+
+      const band = ['John', 'Paul', 'George', 'Ringo'];
+      const fellowship = [
+        'frodo',
+        'sam',
+        'gandalf',
+        'aragorn',
+        'boromir',
+        'legolas',
+        'gimli',
+      ];
+
+      function izzlifyArray(input) {
+        let output = [];
+        for (let item of input) {
+          let newItem = izzlify(item);
+          output.push(newItem);
+        }
+        return output;
+      }
+
+      // Using function pattern of the above function
+
+      function map(func, a) {
+        let output = [];
+        for (let item of a) {
+          output.push(func(item));
+        }
+        return output;
+      }
+
+      let bandoodle = band.map(oodlify);
+      let floodleship = fellowship.map(oodlify);
+      let bandizzle = band.map(izzlify);
+      let fellowshizzle = fellowship.map(izzlify);
+      let bandizzy = band.map(izzy);
+
+      alert(bandoodle);
+      alert(fellowshizzle);
+      alert(bandizzy);
+    </script>
+  </body>
+</html>

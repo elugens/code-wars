@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mumbling</title>
+  </head>
+  <body>
+    <script>
+      /// Mumbling ///
+
+      function accum(s) {
+        let letters = s.split(''),
+          words = [];
+
+        for (let i = 0; i < letters.length; i++) {
+          words.push(
+            letters[i].toUpperCase() +
+              Array(i + 1).join(letters[i].toLowerCase())
+          );
+        }
+
+        return words.join('-');
+
+        /// Coding Alternative ///
+
+        //   function accum(s) {
+        //     let count = 0;
+        //     let words = '';
+
+        //     for (let letter of s) {
+        //       words += letter.toUpperCase() + letter.repeat(count) + '-';
+        //       count++;
+        //     }
+
+        //     return words.substring(0, words.length - 1);
+        //   }
+      }
+
+      alert(accum('abc'));
+    </script>
+  </body>
+</html>

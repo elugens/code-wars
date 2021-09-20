@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Substituting Variables Into Strings: Padded Numbers</title>
+  </head>
+  <body>
+    <script>
+      let value = 5;
+
+      function solution(value) {
+        let stringValue = value.toString();
+        let VALUE = stringValue.padStart(5, '0');
+        return `Value is ${VALUE}`;
+      }
+
+      let value2 = 0;
+
+      function solution2(value2) {
+        return `Value is ${`${value2}`.padStart(5, '0')}`;
+      }
+
+      alert(solution(value2));
+
+      alert(solution(value));
+    </script>
+  </body>
+</html>
